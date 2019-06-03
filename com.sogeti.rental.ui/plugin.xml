@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="com.sogeti.rental.ui" name="vue" schema="schema/com.sogeti.rental.ui.exsd"/>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.sogeti.rental.ui.views.RentalView"
+            id="com.sogeti.rental.ui.rentalView"
+            name="rental"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>
