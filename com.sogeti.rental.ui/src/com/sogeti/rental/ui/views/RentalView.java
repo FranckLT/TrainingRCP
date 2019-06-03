@@ -30,6 +30,10 @@ public class RentalView extends ViewPart {
 		
 		parent.setLayout(new GridLayout(1, false));
 		
+		///////////////////////////////////////////////
+		/////////  Info Client ////////////////////////
+		///////////////////////////////////////////////
+		
 		Group infoGroup = new Group(parent, SWT.NONE);
 		
 		infoGroup.setText("Informations");
@@ -39,27 +43,32 @@ public class RentalView extends ViewPart {
 		GridData gridData = new GridData();
 		gridData.horizontalSpan = 2;
 		gridData.horizontalAlignment = SWT.FILL;
+		
 		objectNameLabel.setLayoutData(gridData);
 		
-		Label rentByLabel = new Label(infoGroup, SWT.BORDER);
+		Label rentByLabel = new Label(infoGroup, SWT.CENTER);
 		rentByLabel.setText("Loué par : ");
 		
-		clientNameLabel = new Label(infoGroup, SWT.BORDER);
+		clientNameLabel = new Label(infoGroup, SWT.CENTER);
+		
+		///////////////////////////////////////////////
+		/////////  Info Date //////////////////////////
+		///////////////////////////////////////////////
 		
 		Group infoGroupDate = new Group(parent, SWT.NONE);
 		
 		infoGroupDate.setText("Date");
 		infoGroupDate.setLayout(new GridLayout(2, false));
 		
-		Label firstDate = new Label(infoGroupDate, SWT.BORDER);
+		Label firstDate = new Label(infoGroupDate, SWT.CENTER);
 		firstDate.setText("du : ");
 		
-		firstDateLabel = new Label(infoGroupDate, SWT.BORDER);
+		firstDateLabel = new Label(infoGroupDate, SWT.CENTER);
 		
-		Label lastDate = new Label(infoGroupDate, SWT.BORDER);
+		Label lastDate = new Label(infoGroupDate, SWT.CENTER);
 		lastDate.setText("au : ");
 	
-		lastDateLabel = new Label(infoGroupDate, SWT.BORDER);
+		lastDateLabel = new Label(infoGroupDate, SWT.CENTER);
 		
 		setRental(RentalCoreActivator.getAgency().getRentals().get(0));
 	}

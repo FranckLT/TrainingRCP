@@ -5,11 +5,16 @@
    <extension
          point="org.eclipse.ui.views">
       <view
+            category="com.sogeti.rental.ui.category"
             class="com.sogeti.rental.ui.views.RentalView"
             id="com.sogeti.rental.ui.rentalView"
             name="rental"
             restorable="true">
       </view>
+      <category
+            id="com.sogeti.rental.ui.category"
+            name="Rental">
+      </category>
    </extension>
 
 </plugin>
